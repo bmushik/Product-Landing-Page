@@ -1,0 +1,237 @@
+:root {
+  --yellow: #ecab2a;
+  --yellow-op: rgba(236, 171, 42, 0.5);
+  --yellow-soft: #f2c469;
+  --purple: #4b156b;
+  --purple-soft: #815b97;
+}
+
+* {
+  margin:0;
+  padding:0;
+  cursor:url(https://i.hizliresim.com/o24x9nm.png),auto;
+  font-family:Nerko One;
+  color: var(--purple);
+}
+
+body {
+  background-color:var(--yellow-soft);
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color:var(--yellow);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  top: 0;
+  z-index:1;
+  border-bottom:3px solid var(--yellow-soft);
+}
+
+h1 {
+  text-align: center;
+  font-size:3.3rem;
+  text-transform: uppercase;
+}
+
+#nav-bar {
+  max-width: 50vw;
+  width:100%;
+}
+
+#nav-bar > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#nav-bar > ul > li {
+  font-weight:bold;
+  display: block;
+  padding:10px;
+}
+
+#nav-bar > ul > li:hover {
+  background-color: var(--purple);
+  color: var(--yellow);
+  border-radius:10px;
+}
+
+li > a {
+  font-family:Kalam;
+  font-size:1.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* SUBSCRIPTION */
+
+.subscribe {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  margin:auto;
+  margin-top:100px;
+}
+
+.subscribe >  form {
+  margin:auto;
+  padding:1vw;
+}
+
+.subscribe > form > input, p {
+  padding:8px;
+  width:100%;
+  font-size:1.4rem;
+  min-height:30px;
+}
+
+.subscribe > form > input {
+  background-color:var(--yellow-soft);
+  border-radius:10px;
+  color:var(--purple);
+}
+
+.subscribe > form > #submit:hover {
+  background-color:var(--yellow);
+}
+
+/* MAIN SECTION */
+
+#main-sec {
+  background-color: var(--yellow);
+  border-radius:20px;
+  text-align:center;
+  max-width:75vw;
+  width:100%;
+  margin:0 auto 20px ;
+}
+
+section > p {
+  font-size:2rem;
+  padding:50px 0 1vw 0;
+}
+
+.flex-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.cont-img {
+  max-width:300px;
+  margin:5px;
+  opacity: 0.8;
+  backface-visibility: hidden;
+}
+
+.cont-img:hover  {
+  opacity: 1;
+}
+
+#spotify {
+  height:352px;
+  width:80%;
+  padding-top:10px;
+}
+
+#info > img {
+    display: block;
+    max-width:50vw;
+    padding-bottom:50px;
+    margin:auto;
+    border-radius:10px;
+}
+
+/* FOOTER */
+
+footer {
+  display:flex;
+  background-color:var(--yellow-op);
+  justify-content:space-between;
+}
+
+footer > p {
+  padding-left:30px;
+  font-family:Kalam;
+}
+
+.social-icons {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+i {
+  font-size:2em;
+  margin-right:20px;
+}
+
+i:hover {
+  font-size:2.5em;
+  color: var(--purple-soft);
+}
+
+/* MEDIUM SCREEN */
+
+@media (max-width: 1000px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .subscribe {
+    margin-top:60px;
+  }
+  #nav-bar {
+    max-width:90vw;
+    width:100%;
+  }
+  h1, #header-img {
+    display:none;
+    visibility:hidden;
+  }
+  section > p {
+  padding-top:70px;
+  }
+}
+
+/* SMALL SCREEN */
+
+@media (max-width: 600px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+  }
+  #video {
+    display:none;
+    visibility:hidden;
+  }
+  .subscribe {
+  margin-top:60px;
+  }
+  section > p {
+    font-size:1.5em;
+    padding-top:30px;
+  }
+  #info > img{
+    min-width:250px;
+  }
+  footer > p {
+  font-size:1.1em;
+  }
+.social-icons {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  }
+  i {
+  font-size:1.6em;
+  }
+}
